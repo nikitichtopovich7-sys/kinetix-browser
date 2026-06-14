@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body { background: #121212; color: white; font-family: sans-serif; display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100vh; margin: 0; }
+        h1 { font-size: 3rem; margin-bottom: 10px; color: #007acc; }
+        p { color: #888; font-size: 1.2rem; }
+        .grid { display: flex; gap: 20px; margin-top: 30px; }
+        .card { background: #1e1e1e; padding: 20px 40px; border-radius: 8px; border: 1px solid #333; cursor: pointer; transition: 0.2s; }
+        .card:hover { transform: translateY(-5px); border-color: #007acc; }
+    </style>
+</head>
+<body>
+    <h1>Kinetix</h1>
+    <p>Добро пожаловать в ваш кастомный браузер</p>
+    <div class="grid">
+        <div class="card" onclick="window.location.href='https://github.com'">GitHub</div>
+        <div class="card" onclick="window.location.href='https://google.com'">Google</div>
+        <div class="card" onclick="window.location.href='https://youtube.com'">YouTube</div>
+    </div>
+</body>
+</html>

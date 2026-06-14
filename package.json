@@ -1,0 +1,41 @@
+{
+  "name": "kinetix-browser",
+  "version": "1.0.0",
+  "description": "Custom Electron Browser Kinetix",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder --windows"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^30.0.0",
+    "electron-builder": "^24.13.3"
+  },
+  "build": {
+    "appId": "com.kinetix.browser",
+    "productName": "Kinetix",
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "Kinetix Browser"
+    },
+    "directories": {
+      "output": "dist"
+    }
+  }
+}

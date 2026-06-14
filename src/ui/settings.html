@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body { background: #121212; color: white; font-family: sans-serif; padding: 40px; }
+        h1 { color: #007acc; margin-bottom: 20px; }
+        .setting-group { background: #1e1e1e; padding: 20px; border-radius: 8px; max-width: 600px; margin-bottom: 20px; }
+        label { display: block; margin-bottom: 10px; font-weight: bold; }
+        input[type="text"] { width: 100%; background: #333; border: 1px solid #555; color: white; padding: 8px; border-radius: 4px; }
+        button { background: #007acc; color: white; border: none; padding: 10px 20px; border-radius: 4px; cursor: pointer; margin-top: 15px; }
+        button:hover { background: #005999; }
+    </style>
+</head>
+<body>
+    <h1>Настройки Kinetix</h1>
+    <div class="setting-group">
+        <label for="homepage">Стартовая страница</label>
+        <input type="text" id="homepage" value="home.html">
+        <button id="save-btn">Сохранить конфигурацию</button>
+    </div>
+    <script>
+        const input = document.getElementById('homepage');
+        if(localStorage.getItem('kinetix_homepage')) {
+            input.value = localStorage.getItem('kinetix_homepage');
+        }
+        document.getElementById('save-btn').addEventListener('click', () => {
+            localStorage.setItem('kinetix_homepage', input.value);
+            alert('Конфигурация успешно сохранена в LocalStorage!');
+        });
+    </script>
+</body>
+</html>
